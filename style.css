@@ -6,8 +6,11 @@ body {
 }
 
 h1 {
-color: purple;
+color: black;
 text-align: center;
+font-family: "Raleway", sans-serif;
+font-weight: 900;
+font-size: 3em;
 }
 
 nav {
@@ -17,6 +20,7 @@ nav {
   flex-direction: row;
   justify-content: space-around;
   padding-bottom: 3em;
+  font-family: "Raleway", sans-serif;
 }
 
 a {
@@ -24,8 +28,9 @@ a {
 }
 
 h2 {
-  color: blue;
+  color: blackx;
   text-align: center;
+  font-family: "Raleway", sans-serif;
 }
 
 .flexContainer {
@@ -35,6 +40,7 @@ h2 {
 
 p {
   text-align: center;
+  font-family: "Lato", sans-serif;
 }
 
 .flexContainer article {
