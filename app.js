@@ -1,4 +1,4 @@
-console.log("success!")
+
 var meatEl = document.getElementById('meatButton');
 var veggieEl = document.getElementById('veggieButton');
 var drinkEl = document.getElementById('beverageButton');
@@ -29,17 +29,6 @@ function showBeverages(){
 }
 
 
-// When an item is clicked
-// I want to add a line item to the shopping Cart
-// I want the shopping cart to keep a running sum total of all prices
-// I want the option to remove each item from the shopping Cart
-// Whenever an item is added or removed, the sum total should be updated accordingly
-// Option to update quantity if possible
-
-// Turn each HTML item into a JS variable
-//
-// Add event listener for a click
-
 
 var meatItem1 = document.getElementById('item1');
 var meatItem2 = document.getElementById('item2');
@@ -68,8 +57,6 @@ function Item (category, name, price) {
     console.log("This " + category + " product is " + name + " and costs $" + price + ".");
   }
 }
-
-
 
 var cartItemsEl = document.getElementById('cartItems');
 
@@ -112,6 +99,6 @@ var beverageItem17 = new Item("beverage", "Beer", 10);
 var beverageItem18 = new Item("beverage", "Whiskey", 25);
 
 
-function updateCart() {
-  cartItemsEl.innerHTML = (this.name + " $" + this.price);
+function updateCart () {
+  cartItemsEl.innerHTML = (this.getElementsByTagName('p')[0].innerText);
 };
