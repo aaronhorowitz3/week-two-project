@@ -1,4 +1,7 @@
 
+
+// Nav functions to hide/show content
+
 var meatEl = document.getElementById('meatButton');
 var veggieEl = document.getElementById('veggieButton');
 var drinkEl = document.getElementById('beverageButton');
@@ -28,7 +31,7 @@ function showBeverages(){
   document.getElementById("homeStore").classList.add('hidden');
 }
 
-
+// Grabbing HTML elements and turning them into variables
 
 var meatItem1 = document.getElementById('item1');
 var meatItem2 = document.getElementById('item2');
@@ -49,16 +52,7 @@ var beverageItem16 = document.getElementById('item16');
 var beverageItem17 = document.getElementById('item17');
 var beverageItem18 = document.getElementById('item18');
 
-function Item (category, name, price) {
-  this.category = category;
-  this.name = name;
-  this.price = price;
-  this.describe = function() {
-    console.log("This " + category + " product is " + name + " and costs $" + price + ".");
-  }
-}
-
-var cartItemsEl = document.getElementById('cartItems');
+// adding event listeners to perform functions when clicked
 
 meatItem1.addEventListener('click', updateCart);
 meatItem2.addEventListener('click', updateCart);
@@ -79,6 +73,15 @@ beverageItem16.addEventListener('click', updateCart);
 beverageItem17.addEventListener('click', updateCart);
 beverageItem18.addEventListener('click', updateCart);
 
+// added function to pull name and price attributes for each variable
+
+
+// turning shopping cart element into a variable
+
+var cartItemsEl = document.getElementById('cartItems');
+
+// assigning attributes to each variable
+
 var meatItem1 = new Item("meat", "T-Bone Steak", 20);
 var meatItem2 = new Item("meat", "Chicken Wings", 10);
 var meatItem3 = new Item("meat", "Bacon", 5);
@@ -98,7 +101,19 @@ var beverageItem16 = new Item("beverage", "Sweet Tea", 2);
 var beverageItem17 = new Item("beverage", "Beer", 10);
 var beverageItem18 = new Item("beverage", "Whiskey", 25);
 
+// function to test and ensure values are recognized
+
+function Item (category, name, price) {
+  this.category = category;
+  this.name = name;
+  this.price = price;
+  this.describe = function() {
+    console.log("This " + category + " product is " + name + " and costs $" + price + ".");
+  }
+}
+
+// function to add items to cart
 
 function updateCart () {
-  cartItemsEl.innerHTML = (this.getElementsByTagName('p')[0].innerText);
+  cartItemsEl.innerHTML = (this.getElementsByTagName('p')[0].innerText) +   "<hr>";
 };
